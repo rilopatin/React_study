@@ -23,11 +23,11 @@ const Header = styled.div`
 //<Header as='a' - to use Header as a link
 //////////////////////////////////////////
 
-const AppHeader = () => {
+const AppHeader = ({liked, allPosts}) => {
     return (
         <Header as='a' colored="false">
             <h1>Regina Lopatin</h1>
-            <h2>5 записей, из них понравилось 0</h2>
+            <h2>{allPosts} записей, из них понравилось {liked}</h2>
         </Header>
     )
 }

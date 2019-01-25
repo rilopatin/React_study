@@ -9,43 +9,18 @@ export default class PostListItem extends Component {
         super(props)
         const {id, label} = props
         this.state = {
-            important: false,
-            like:false,
             edit: false,
             labelEdit: label
         }
-        this.onImportant = this.onImportant.bind(this)
-        this.onLike = this.onLike.bind(this)
         this.modalOpen = this.modalOpen.bind(this)
         //this.changeLabel = this.changeLabel.bind(this)
     }
 
-    onImportant() {
-        this.setState(({important}) => ({
-            important: !important
-        }))
-    }
-    onLike() {
-        this.setState(({like}) => ({
-            like: !like
-        }))
-    }
     modalOpen () {
         this.setState (({edit}) => ({
             edit: !edit
         }))
     }
-    /*changeLabel = (event, id) => {
-        console.log(this.props.data1)
-        const postIndex = this.state.data1.findIndex(p => {
-            return p.id === id
-        })
-        const post = {...this.state.data1[postIndex]}
-        post.label = event.target.value
-        const posts = [...this.state.data1]
-        posts[postIndex] = post
-        this.setState({data1: posts})
-    }*/
 
     changeLabel = (text) => {
         this.setState({labelEdit: text});
@@ -53,8 +28,8 @@ export default class PostListItem extends Component {
     }
 
     render () {
-        const {onDelete} = this.props
-        const {important, like, edit} = this.state
+        const {onDelete, onToggleLiked, onToggleImportant, important, like} = this.props
+        const {edit} = this.state
         let classNames = 'app-list-item d-flex justify-content-between'
         if (important) {
             classNames += ' important'
@@ -69,14 +44,14 @@ export default class PostListItem extends Component {
            </Modal>
            <div className={classNames}>
             <span className="app-list-item-label"
-                onClick={this.onLike}>
+                onClick={onToggleLiked}>
                 {this.state.labelEdit}
             </span>
                <div className="d-flex justify-content-center align-items-center">
                    <button
                        type="button"
                        className="btn-star btn-sm"
-                       onClick={this.onImportant}>
+                       onClick={onToggleImportant}>
                        <i className="fa fa-star"></i>
                    </button>
                    <button
