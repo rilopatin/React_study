@@ -1,0 +1,51 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #0837B0 0%, #021E66 100%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+}
+.counter {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    margin: 189px auto 34px auto
+}
+.counter span {
+    font-family: Roboto;
+    font-size: 150px;
+    color: #000000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container > div {
+    width: 65px;
+    height: 65px;
+    border-radius: 4px;
+    margin: 17px;
+    text-align: center;
+    line-height: 60px;
+
+    /*line-height: 75px;*/
+    /*font-size: 30px;*/
+}
+.sum {
+    background: #089C20;
+}
+.sub {
+    background: #E7AA10;
+}
+.reset {
+    background: #CF1C1C;
+}
+.flex-container > div:last-child {
+    line-height: 30px;
+}
+
