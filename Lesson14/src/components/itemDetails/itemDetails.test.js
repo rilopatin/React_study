@@ -9,9 +9,6 @@ describe('Testing <ItemDetails/>', () => {
         it('ItemDetails has been rendered correctly', () => {
             expect(item).toMatchSnapshot()
         });
-        it('ItemDetails state "item" is empty object', () => {
-            expect(item.state().item).toBeObject()
-        });
         it('ItemDetails state "loading" is true', () => {
             expect(item.state().loading).toBeTruthy()
         });
