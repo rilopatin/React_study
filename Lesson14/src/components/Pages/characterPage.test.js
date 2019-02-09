@@ -12,7 +12,4 @@ describe('Testing <CharacterPage/>', () => {
     it('CharacterPage state "error" is false', () => {
         expect(char.state.error).toBeFalsy()
     });
-    it('RandomChar state "selectedItem" is empty object', () => {
-        expect(char.state().selectedItem).toBeObject()
-    });
 })

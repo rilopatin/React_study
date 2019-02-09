@@ -25,7 +25,7 @@ ShallowWrapper {
       />,
       "right": <ItemDetails
         getData={[Function]}
-        itemId={Object {}}
+        itemId={null}
       >
         <Field
           field="gender"
@@ -62,7 +62,7 @@ ShallowWrapper {
         />,
         "right": <ItemDetails
           getData={[Function]}
-          itemId={Object {}}
+          itemId={null}
         >
           <Field
             field="gender"

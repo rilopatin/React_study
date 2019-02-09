@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import error from './error.jpg'
-//import error404 from './error404'
-
+import error404 from './error404.png'
 
 import img from './error.jpg'
-import { spawn } from 'child_process';
+// import { spawn } from 'child_process';
 
 export default class ErrorMessage extends Component {
     render () {
@@ -12,7 +11,7 @@ export default class ErrorMessage extends Component {
         let imgName, errText;
         switch(code) {
             case '404': {
-                imgName = `${error}`
+                imgName = `${error404}`
                 errText = `Error ${code} : resource not found`
                 break
             }
@@ -38,7 +37,7 @@ export default class ErrorMessage extends Component {
         return (
             <>
             <span className='error-text'>{errText}</span>
-            <img> {imgName} </img>
+            <img alt="error"> {imgName} </img>
             </>
         )
     }

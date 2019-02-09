@@ -20,10 +20,6 @@ const RandomBlock = styled.div`
 const Term = styled.span`
     font-weight: bold;
 `
-const RandomBlockWrap = styled.div`
-    margin-bottom: 40px;
-`
-
 
 export default class RandomChar extends Component {
 

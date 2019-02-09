@@ -25,7 +25,7 @@ ShallowWrapper {
       />,
       "right": <ItemDetails
         getData={[Function]}
-        itemId={Object {}}
+        itemId={null}
       >
         <Field
           field="region"
@@ -66,7 +66,7 @@ ShallowWrapper {
         />,
         "right": <ItemDetails
           getData={[Function]}
-          itemId={Object {}}
+          itemId={null}
         >
           <Field
             field="region"

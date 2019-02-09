@@ -12,7 +12,4 @@ describe('Testing <HousePage/>', () => {
     it('HousePage state "error" is false', () => {
         expect(house.state.error).toBeFalsy()
     });
-    it('HousePage state "selectedItem" is empty object', () => {
-        expect(house.state().selectedItem).toBeObject()
-    });
 })
